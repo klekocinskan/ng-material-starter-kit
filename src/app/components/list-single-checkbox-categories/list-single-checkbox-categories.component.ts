@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, map, Observable } from 'rxjs';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
@@ -10,7 +10,10 @@ import { ProductsService } from '../../services/products.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListSingleCheckboxCategoriesComponent {
-  readonly categories$: Observable<string[]> = this._productsService.getAllCategories();
+  readonly categories$: Observable<string[]> = this._productsService.getAllCategories().pipe(
+    delay(3000),
+    map(()=>[])
+  );
 
   constructor(private _productsService: ProductsService) {
 }

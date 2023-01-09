@@ -8,6 +8,7 @@ import { ListSingleChipsCryptoComponent } from './components/list-single-chips-c
 import { ListSingleCheckboxCategoriesComponent } from './components/list-single-checkbox-categories/list-single-checkbox-categories.component';
 import { ListSingleMenuCategoriesComponent } from './components/list-single-menu-categories/list-single-menu-categories.component';
 import { ListMultiTableProductsComponent } from './components/list-multi-table-products/list-multi-table-products.component';
+import { ListMultiTableCryptoComponent } from './components/list-multi-table-crypto/list-multi-table-crypto.component';
 import { ListSingleListNamesComponentModule } from './components/list-single-list-names/list-single-list-names.component-module';
 import { ListLoadingListProductsComponentModule } from './components/list-loading-list-products/list-loading-list-products.component-module';
 import { ListMultiListProductsComponentModule } from './components/list-multi-list-products/list-multi-list-products.component-module';
@@ -16,9 +17,10 @@ import { ListSingleChipsCryptoComponentModule } from './components/list-single-c
 import { ListSingleCheckboxCategoriesComponentModule } from './components/list-single-checkbox-categories/list-single-checkbox-categories.component-module';
 import { ListSingleMenuCategoriesComponentModule } from './components/list-single-menu-categories/list-single-menu-categories.component-module';
 import { ListMultiTableProductsComponentModule } from './components/list-multi-table-products/list-multi-table-products.component-module';
+import { ListMultiTableCryptoComponentModule } from './components/list-multi-table-crypto/list-multi-table-crypto.component-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'list-1-single-list-names', component: ListSingleListNamesComponent }, { path: 'products', component: ListLoadingListProductsComponent }, { path: 'list-1-multi-list-products', component: ListMultiListProductsComponent }, { path: 'list-1-nested-list-influencers', component: ListNestedListAndChipsInfluencersComponent }, { path: 'crypto', component: ListSingleChipsCryptoComponent }, { path: 'checkbox-categories', component: ListSingleCheckboxCategoriesComponent }, { path: 'categories-menu', component: ListSingleMenuCategoriesComponent }, { path: 'product-search', component: ListMultiTableProductsComponent }]), ListSingleListNamesComponentModule, ListLoadingListProductsComponentModule, ListMultiListProductsComponentModule, ListNestedListAndChipsInfluencersComponentModule, ListSingleChipsCryptoComponentModule, ListSingleCheckboxCategoriesComponentModule, ListSingleMenuCategoriesComponentModule, ListMultiTableProductsComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'list-1-single-list-names', component: ListSingleListNamesComponent }, { path: 'products', component: ListLoadingListProductsComponent }, { path: 'list-1-multi-list-products', component: ListMultiListProductsComponent }, { path: 'list-1-nested-list-influencers', component: ListNestedListAndChipsInfluencersComponent }, { path: 'crypto', component: ListSingleChipsCryptoComponent }, { path: 'checkbox-categories', component: ListSingleCheckboxCategoriesComponent }, { path: 'categories-menu', component: ListSingleMenuCategoriesComponent }, { path: 'product-search', component: ListMultiTableProductsComponent }, { path: 'crypto-table', component: ListMultiTableCryptoComponent }]), ListSingleListNamesComponentModule, ListLoadingListProductsComponentModule, ListMultiListProductsComponentModule, ListNestedListAndChipsInfluencersComponentModule, ListSingleChipsCryptoComponentModule, ListSingleCheckboxCategoriesComponentModule, ListSingleMenuCategoriesComponentModule, ListMultiTableProductsComponentModule, ListMultiTableCryptoComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

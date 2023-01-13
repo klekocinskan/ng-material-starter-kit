@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" [formControl]="email" required>
+    <mat-error *ngIf="email!valid">Email is invalid</mat-error>
+
+</mat-form-field>
+{{email.valueChanges | async}}

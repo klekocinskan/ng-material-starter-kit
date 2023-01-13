@@ -9,11 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormControlNameComponent {
-  readonly name: FormGroup = new FormGroup({ name: new FormControl('',[Validators.required, Validators.pattern('[a-z]{3,}')]) });
+  readonly name = new FormControl('',[Validators.required, Validators.minLength(3)]);
+  
 
-  onNameSubmitted(name: FormGroup): void {
+  onNameSubmitted(): void {
   }
 
-  
 }
 

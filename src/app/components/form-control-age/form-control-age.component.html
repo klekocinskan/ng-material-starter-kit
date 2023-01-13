@@ -2,7 +2,7 @@
    <mat-form-field appearance="fill">
         <mat-label>Age</mat-label>
         <input matInput type="text" placeholder="Age" [formControl]="age" required>
-        <mat-error *ngIf="age.invalid">You are under age :(</mat-error>
+        <mat-error *ngIf="age!valid">You are under age :(</mat-error>
 </mat-form-field>
 {{age.valueChanges | async}}
 

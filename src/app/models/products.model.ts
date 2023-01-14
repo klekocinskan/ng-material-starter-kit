@@ -5,3 +5,10 @@ export interface ProductsModel {
   readonly image: string;
   readonly category: string;
 }
+
+export interface FormProductsModel{
+  readonly title: string;
+  readonly price: string;
+  readonly category: string;
+  readonly description: string;
+}

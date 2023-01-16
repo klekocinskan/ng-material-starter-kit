@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LoginReditentialsModel } from '../models/login-creditentials.model';
+import { LoginReditentialsModel } from '../models/login-reditentials.model'
 import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })

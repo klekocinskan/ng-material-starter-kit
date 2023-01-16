@@ -1,0 +1,24 @@
+<h1>Create user with role</h1>
+<form [formGroup]="createUserForm" (ngSubmit)="onCreateUserFormSubmitted(createUserForm)">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="createUserForm.get('email')!.invalid">email is invalid</mat-error>
+        </mat-form-field>
+    </div>
+   
+ 
+
+        <mat-label>Choose an option</mat-label>      
+        <div>
+            <mat-radio-group formControlName="role">
+                <mat-radio-button *ngFor="let item of roles$ | async" [value]="item.id">
+                    {{item.role}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </div>
+    <div>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+    </div>
+</form>
